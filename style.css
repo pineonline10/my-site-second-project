@@ -8,8 +8,7 @@
 :root{
     --link-hover: #4bf54b;
     --background:#ffffff;
-
-
+    --maincolor:#aaaaaa;
 }
 
 body{
@@ -42,6 +41,7 @@ header{
         border: solid 5px var(--link-hover);
         border-radius: 5%;
 }
+
 nav{
     display: flex;
     flex: 0 2 390px;
@@ -49,10 +49,12 @@ nav{
     align-items: center;
     padding: 20px 100px;
 }
+
 nav ul{
     display: contents;
     flex: 0 2 390px;
 }
+
 nav ul li{
     list-style: none;
     display: inline-block;
@@ -68,7 +70,7 @@ nav ul li a{
 }
 
 .banner{
-flex: 0 0 100%;
+position: relative;
 }
 
 .banner img{
@@ -76,7 +78,7 @@ flex: 0 0 100%;
 }
 
 .banner .welcome{
-    position: relative;
+    display: flex;
     background-color: var(--background);
     left: 0;
     top: 30%;
@@ -114,3 +116,28 @@ nav ul li a:hover{
     border-color: var(--link-hover);
     color: var(--link-hover);
 }
+
+.welcome {
+    top: 35%;
+    left: 8%;
+}
+
+.title{
+    color: var(--maincolor);
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: absolute;
+    top: 77%;
+    left: 30%;
+    margin-bottom: 20px;
+    text-align: left;
+        background-color: var(--link-hover);
+        background-image: linear-gradient(45deg, var(--link-hover), #af4261);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+    }
+
