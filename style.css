@@ -248,21 +248,31 @@ display:inline-block;
 font-size: 10vw;
 margin-left: 5vw;
 margin-right: 5vw;
+}
 
-}
-@media only screen and (max-width: 999px) {
-    /* rules that only apply for canvases narrower than 1000px */
-}
-@media only screen and (device-width: 768px) and (orientation: landscape) {
-    /* rules for iPad in landscape orientation **/
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    /* iPhone, Android rules here */
-     .main-nav ul{
-        font-size: 2vw;
-        padding: 0 0 0 0;
+@media screen and (max-width: 992px) {
+   .project{
+    width: 50%;
+   }
+  }
+  
+  /* Large smartphones - navbar changes color */
+  @media screen and (max-width: 768px) {
+    .main-nav {
+     width: 75%;
     }
-}
+  }
+  
+  /* Small smartphones - image placeholders change color */
+  @media screen and (max-width: 576px) {
+    .project{
+      width: 100%;
+      flex-direction: column;
+    }
+    footer{
+        width:100%;
+    }
+  }
 /* .wrapper{
     width: 100%;
     margin: 5vw auto;
