@@ -1,5 +1,5 @@
 *{
-    background-color: azure;
+    background-color: var(--page-color);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,11 +7,20 @@
 }
 
 :root{
-    --link-hover: #4bf54b;
+    --link-hover: #39c439;
     --background:#ffffff;
     --maincolor:#aaaaaa;
+    --page-color:#cff1f1;
 }
 
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
 body{
     flex: 0 2 390px;
 }
@@ -19,11 +28,17 @@ body{
 a{
     text-decoration: none;
 }
-
+nav div{
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
 .main-nav{
     width: 100%;
     height:20%;
-    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     background-size: cover;
 }
 img{
@@ -32,7 +47,7 @@ height: auto;
 }
 
 header{
-    
+    position: relative;
 }
 .center{
         display: block;
@@ -45,8 +60,6 @@ header{
 
 nav{
     display: flex;
-    flex: 0 2 390px;
-    justify-content: space-evenly;
     align-items: center;
     padding: 20px 100px;
 }
@@ -63,15 +76,11 @@ nav ul li{
 }
 
 nav ul li a{
-    position: relative;
     color:#aaaaaa;
     padding: 5px 0;
-    font-weight: bold;
     letter-spacing: 1.5px;
-}
-
-.banner{
-position: relative;
+    font-size: 2vw;
+    text-transform: lowercase;
 }
 
 .banner img{
@@ -96,20 +105,26 @@ nav ul li a:hover{
 nav ul li a:hover{
     width: 100%;
 }
-
 .button-resume {
-    color: var(--background);
-    font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    padding: 12px 15px;
-    display: inline-block;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-    background:var(--link-hover);
-    background-size: 152% 100%;
-    border: 2px solid var(--link-hover);
-    border-radius:30%;
+  background-color: var(--link-hover);
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+  color: var(--background);
+  cursor: pointer;
+  display: inline-block;
+  font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: lowercase;
+  transition: all 300ms ease-in-out;
+  border: 1;
+  font-size: 2vw;
+  user-select: none;
+  -webkit-user-select: none;
+  letter-spacing: 1.5px;
+  touch-action: manipulation;
+  border: 0.2vw solid var(--link-hover);
 }
 
 .button-resume:hover {
@@ -122,15 +137,16 @@ nav ul li a:hover{
     top: 35%;
     left: 8%;
 }
-
+figure div{
+    display: flex;
+    justify-content: center;
+}
 .title{
     color: var(--maincolor);
-    font-size: 16px;
+    font-size: 3vw;
     text-transform: uppercase;
     letter-spacing: 5px;
-    position: absolute;
-    top: 80%;
-    left: 30%;
+    margin-top: 10px;
     margin-bottom: 20px;
     text-align: left;
         background-color: var(--link-hover);
@@ -142,18 +158,147 @@ nav ul li a:hover{
         -moz-text-fill-color: transparent;
     }
 
-h2 {
+#port-bar {
     color: var(--background);
     background: var(--link-hover);
-    font-size: 36px;
-    width: auto;
-    font-weight: bolder;
+    font-size: 4vw;
+    width: 100%;
+    position: relative;
+    top: 0vh;
+    font-weight: lighter;
+    padding: 0.3vw;
     line-height: 40px;
     text-transform: inherit;
+    letter-spacing: 0.5vw;
     text-align: center;
 }
 
-h2 span{
-    background-color: var(--link-hover);
+article h2{
+    display: block;
+    font-size: 5.5vw;
+    text-transform: uppercase;
+    letter-spacing: 1.5vw;
+    text-align: center;
+    position: relative;
+    color: rgb(39, 38, 38);
+    padding: 15vw;
+    ;
 }
+#aboutMe p{
+    display: inline-block;
+    margin: 5vw;
+}
+
+.panels-flex{
+    display: flex;
+    flex-wrap: wrap;
+    height: 40vh;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    margin-top: 10vh;
+}
+
+.project{
+
+}
+
+.project img{
+    border: 0.3vh solid var(--maincolor);
+    border-radius: 10%;
+}
+
+.project img:hover{
+    transform: scale(0.8);
+    transition: transform:all 1s ease-in-out;
+}
+
+.project p{
+    font-size: 2vw;
+
+}
+.one{
+    width: 70%;
+}
+
+.two{
+    width: 33%;
+}
+.three{
+    width: 33%;
+}
+.four{
+    width: 33%;
+}
+
+@media only screen and (max-width: 999px) {
+    /* rules that only apply for canvases narrower than 1000px */
+}
+@media only screen and (device-width: 768px) and (orientation: landscape) {
+    /* rules for iPad in landscape orientation **/
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* iPhone, Android rules here */
+     .main-nav ul{
+        font-size: 2vw;
+        padding: 0 0 0 0;
+    }
+}
+/* .wrapper{
+    width: 100%;
+    margin: 5vw auto;
+}
+
+.panels-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project {
+    height: 100px;
+    min-width: 390px;
+}
+.project p{
+    display: flex;
+}
+.project .prime{
+
+}
+
+.aside h2{
+    display: flex;
+    flex: 1;
+    padding: 2vw;
+    font-size: 2vw;
+}
+
+.project .one{
+    flex-grow: 2;
+}
+
+.project .two{
+   flex-grow: 3;
+}
+.project .three {
+
+}
+
+.project .four{
+
+} */
+
+/* @media screen and (min-width: 390px) { */
+    /* .panels{ */
+        /* flex-direction: row; */
+        
+    /* } */
+/* } */
+/* @media screen and (min-width: 912px) { */
+    /* .panels{ */
+        /* flex-direction: row; */
+    /* }  */
+/* } */
+
+/* CSS */
 
