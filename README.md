@@ -10,3 +10,7 @@ I learned a lot about affecting HTML code through CSS, the importance
 of using the internet (w3schools, stackoverflow, etc.) as a resource for
 future projects, and about resizing and hover effects.
 
+Along with  my HTML file, there is a reset.css, a stylesheet as style.css, and a folder of images used in the project.
+
+Here is the URL to the deployed site:
+https://pineonline10.github.io/my-site-second-project/
